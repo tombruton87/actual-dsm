@@ -1,0 +1,26 @@
+    <section data-page="budgets" hidden>
+      <div class="note">The budgets kept on this Synology. You work on them in <a class="ab-link" href="#" target="_blank" rel="noopener">Actual</a>, in a browser or as an app on your phone; each device keeps a copy and syncs its changes here.</div>
+      <div class="tiles" id="bd-tiles"></div>
+      <div class="card"><table><thead><tr><th>Budget</th><th>Size</th><th>Last change synced</th><th></th></tr></thead><tbody id="bd-list"></tbody></table></div>
+      <div class="card"><h2>When syncing goes quiet</h2><div class="in">
+        <p class="muted small">A device that's signed out, or can't reach the Synology, carries on working alone — and its changes aren't backed up here. DSM can tell you when no budget has synced for a while.</p>
+        <label class="f"><span>Warn after</span><select id="st-days"><option value="3">3 days</option><option value="7">a week</option><option value="14">2 weeks</option><option value="30">a month</option><option value="0">Never</option></select></label>
+        <button class="btn" id="st-save" data-app>Save</button></div></div>
+      <div class="card"><h2>Budget file size</h2><div class="in">
+        <p class="muted small">The biggest budget a device may upload. Twenty megabytes covers years of transactions; raise it if a big budget won't sync.</p>
+        <label class="f"><span>Up to</span><select id="lm-mb"><option value="20">20 MB</option><option value="50">50 MB</option><option value="100">100 MB</option><option value="200">200 MB</option></select></label>
+        <button class="btn" id="lm-save" data-app>Save</button></div></div>
+    </section>
+
+    <section data-page="signin" hidden>
+      <div class="note">Actual's server has one password, shared by everyone who uses your budgets. Each budget can also have its own encryption password, set in Actual — the server never sees that one.</div>
+      <div class="tiles" id="si-tiles"></div>
+      <div class="card"><h2>Open Actual on a phone</h2><div class="in"><div class="qr-row"><img id="si-qr" alt="QR code for Actual's address">
+        <div><p class="url" id="si-url"></p>
+        <p class="muted small" style="max-width:420px">Scan it, sign in with the server password, then <b>Add to Home Screen</b> (Safari: Share → Add to Home Screen; Chrome: ⋮ → Install app). Actual then opens like an app and works offline.</p>
+        <p class="muted small" id="si-cert"></p></div></div></div></div>
+      <div class="card"><h2>The server password</h2><div class="in">
+        <p class="muted small">Lost it? Make a new one — shown once. Devices that are signed in stay signed in unless you sign them out too.</p>
+        <p><label><input type="checkbox" id="pw-out"> Also sign out every device</label></p>
+        <p><button class="btn primary" id="pw-new" data-app>New password</button> <button class="btn" id="so-all" data-app>Sign out every device</button></p></div></div>
+    </section>

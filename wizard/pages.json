@@ -1,0 +1,12 @@
+, {
+    "step_title": "Actual Budget",
+    "items": [{
+        "type": "singleselect",
+        "desc": "Actual works only over HTTPS — browsers keep the features it needs for secure pages. The server's password is made at the first start and shown once in the Actual Budget window in DSM.",
+        "subitems": [
+            { "key": "wizard_tls_dsm", "desc": "HTTPS with DSM's certificate: the system default from Control Panel → Security → Certificate (a self-signed one if there's none)", "defaultValue": true },
+            { "key": "wizard_tls_self", "desc": "HTTPS with a self-signed certificate made by the package (each device warns once)", "defaultValue": false },
+            { "key": "wizard_tls_off", "desc": "Plain HTTP — only if DSM's reverse proxy will provide HTTPS in front", "defaultValue": false }
+        ]
+    }]
+}
